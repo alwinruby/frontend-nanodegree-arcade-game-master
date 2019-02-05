@@ -24,11 +24,15 @@ Enemy.prototype.update = function(dt) {
     this.x = this.x + this.speed * dt;
 
     if (this.x > ctx.canvas.width) {
-        var randomSpeed = Enemy.speeds[Math.floor(Math.random() * Enemy.speeds.length)];
-
-        this.x = Enemy.offScreenLocation;
-        this.speed = randomSpeed;
+        this.reset();
     }
+};
+
+Enemy.prototype.reset = function() {
+    var randomSpeed = Enemy.speeds[Math.floor(Math.random() * Enemy.speeds.length)];
+
+    this.x = Enemy.offScreenLocation;
+    this.speed = randomSpeed;
 };
 
 // Draw the enemy on the screen, required method for game
