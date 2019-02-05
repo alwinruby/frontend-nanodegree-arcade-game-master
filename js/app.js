@@ -12,6 +12,8 @@ var Enemy = function(horizontLocation, speed) {
 };
 
 Enemy.offScreenLocation = -100;
+
+// list of speeds for the enemy
 Enemy.speeds = [100, 150, 200, 250, 300, 350, 400, 450];
 
 // Update the enemy's position, required method for game
@@ -28,6 +30,7 @@ Enemy.prototype.update = function(dt) {
     }
 };
 
+// resets the enemy's location once they've fully crossed the screen
 Enemy.prototype.reset = function() {
     var randomSpeed = Enemy.speeds[Math.floor(Math.random() * Enemy.speeds.length)];
 
@@ -41,6 +44,7 @@ Enemy.prototype.render = function() {
     this.detectCollision();
 };
 
+// Detects how close the player is to an enemy and resets the player if necessary
 Enemy.prototype.detectCollision = function () {
     var horizontalDistance = player.x - this.x;
     var verticalDistance = player.y - this.y;
@@ -60,10 +64,12 @@ function Player() {
     this.y = 380;
 }
 
+// unnecessary function that engine.js requires
 Player.prototype.update = function () {
 
 };
 
+// moves the player the direction of the pressed key
 Player.prototype.handleInput = function (direction) {
     var verticalMovement = 0;
     var horizontalMovement = 0;
@@ -84,11 +90,13 @@ Player.prototype.handleInput = function (direction) {
     this.verifyMovement();
 };
 
+// resets the player to their starting location
 Player.prototype.reset = function () {
     this.x = 200;
     this.y = 380;
 }
 
+// verifies that the player is allowed to move to their new location
 Player.prototype.verifyMovement = function () {
     var resetPlayer = false;
 
@@ -115,6 +123,7 @@ Player.prototype.verifyMovement = function () {
     }
 };
 
+// draws the player on the screen
 Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
