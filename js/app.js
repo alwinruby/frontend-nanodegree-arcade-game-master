@@ -38,6 +38,18 @@ Enemy.prototype.reset = function() {
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    this.detectCollision();
+};
+
+Enemy.prototype.detectCollision = function () {
+    var horizontalDistance = player.x - this.x;
+    var verticalDistance = player.y - this.y;
+
+    if (horizontalDistance > -50 && horizontalDistance < 50 &&
+        verticalDistance > -30 && verticalDistance < 30) {
+        this.x = 200;
+        this.y = 380;
+    }
 };
 
 // Now write your own player class
