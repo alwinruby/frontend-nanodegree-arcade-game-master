@@ -92,7 +92,7 @@ Player.prototype.handleInput = function (direction) {
 Player.prototype.reset = function () {
     this.x = 200;
     this.y = 380;
-}
+};
 
 // verifies that the player is allowed to move to their new location
 Player.prototype.verifyMovement = function () {
@@ -116,7 +116,7 @@ Player.prototype.verifyMovement = function () {
 // draws the player on the screen
 Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
