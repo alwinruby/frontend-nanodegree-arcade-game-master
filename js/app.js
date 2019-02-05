@@ -98,9 +98,8 @@ Player.prototype.reset = function () {
 Player.prototype.verifyMovement = function () {
     var resetPlayer = false;
 
-    // if player reaches water
-    if (this.y <= 35) {
-        // console.log('hit the water');
+    // if player reaches water or goes off bottom of the board
+    if (this.y <= 35 || this.y >= 450) {
         resetPlayer = true;
     }
 
