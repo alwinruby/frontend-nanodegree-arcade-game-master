@@ -53,6 +53,25 @@ Player.prototype.update = function () {
 
 };
 
+Player.prototype.handleInput = function (direction) {
+    console.log(direction);
+    var verticalMovement = 0;
+    var horizontalMovement = 0;
+
+    if (direction === 'up') {
+        verticalMovement = -85;
+    } else if (direction === 'down') {
+        verticalMovement = 85;
+    } else if (direction === 'left') {
+        horizontalMovement = -100;
+    } else {
+        horizontalMovement = 100;
+    }
+
+    this.x += horizontalMovement;
+    this.y += verticalMovement;
+};
+
 Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
