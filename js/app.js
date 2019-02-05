@@ -6,12 +6,10 @@ var Enemy = function(horizontLocation, speed) {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
-    this.x = Enemy.offScreenLocation;
+    this.x = -100;
     this.y = horizontLocation;
     this.speed = speed;
 };
-
-Enemy.offScreenLocation = -100;
 
 // list of speeds for the enemy
 Enemy.speeds = [100, 150, 200, 250, 300, 350, 400, 450];
@@ -34,7 +32,7 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.reset = function() {
     var randomSpeed = Enemy.speeds[Math.floor(Math.random() * Enemy.speeds.length)];
 
-    this.x = Enemy.offScreenLocation;
+    this.x = -100;
     this.speed = randomSpeed;
 };
 
