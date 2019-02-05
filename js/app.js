@@ -72,14 +72,18 @@ Player.prototype.handleInput = function (direction) {
     var verticalMovement = 0;
     var horizontalMovement = 0;
 
-    if (direction === 'up') {
-        verticalMovement = -85;
-    } else if (direction === 'down') {
-        verticalMovement = 85;
-    } else if (direction === 'left') {
-        horizontalMovement = -100;
-    } else {
-        horizontalMovement = 100;
+    switch (direction) {
+        case 'up':
+            verticalMovement = -85;
+            break;
+        case 'down':
+            verticalMovement = 85;
+            break;
+        case 'left':
+            horizontalMovement = -100;
+            break;
+        default:
+            horizontalMovement = 100;
     }
 
     this.x += horizontalMovement;
