@@ -104,15 +104,8 @@ Player.prototype.verifyMovement = function () {
         resetPlayer = true;
     }
 
-    // if player goes off left side of screen
-    if (this.x < 0) {
-        // console.log('went off the left side!')
-        resetPlayer = true;
-    }
-
-    // if player goes off right side of screen
-    if (this.x >= 500) {
-        // console.log('went off the right side!')
+    // if player goes off left or right side of screen
+    if (this.x < 0 || this.x >= 500) {
         resetPlayer = true;
     }
 
