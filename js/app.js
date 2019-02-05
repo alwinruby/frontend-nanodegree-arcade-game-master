@@ -47,8 +47,7 @@ Enemy.prototype.detectCollision = function () {
 
     if (horizontalDistance > -50 && horizontalDistance < 50 &&
         verticalDistance > -30 && verticalDistance < 30) {
-        this.x = 200;
-        this.y = 380;
+        player.reset();
     }
 };
 
@@ -85,6 +84,11 @@ Player.prototype.handleInput = function (direction) {
     this.verifyMovement();
 };
 
+Player.prototype.reset = function () {
+    this.x = 200;
+    this.y = 380;
+}
+
 Player.prototype.verifyMovement = function () {
     var resetPlayer = false;
 
@@ -107,8 +111,7 @@ Player.prototype.verifyMovement = function () {
     }
 
     if (resetPlayer) {
-        this.x = 200;
-        this.y = 380;
+        this.reset();
     }
 };
 
