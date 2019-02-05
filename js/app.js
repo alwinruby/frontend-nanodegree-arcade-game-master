@@ -12,6 +12,7 @@ var Enemy = function(horizontLocation, speed) {
 };
 
 Enemy.offScreenLocation = -100;
+Enemy.speeds = [100, 150, 200, 250, 300, 350, 400, 450];
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -23,7 +24,10 @@ Enemy.prototype.update = function(dt) {
     this.x = this.x + this.speed * dt;
 
     if (this.x > ctx.canvas.width) {
+        var randomSpeed = Enemy.speeds[Math.floor(Math.random() * Enemy.speeds.length)];
+
         this.x = Enemy.offScreenLocation;
+        this.speed = randomSpeed;
     }
 };
 
