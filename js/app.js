@@ -54,7 +54,6 @@ Player.prototype.update = function () {
 };
 
 Player.prototype.handleInput = function (direction) {
-    console.log(direction);
     var verticalMovement = 0;
     var horizontalMovement = 0;
 
@@ -70,6 +69,35 @@ Player.prototype.handleInput = function (direction) {
 
     this.x += horizontalMovement;
     this.y += verticalMovement;
+
+    this.verifyMovement();
+};
+
+Player.prototype.verifyMovement = function () {
+    var resetPlayer = false;
+
+    // if player reaches water
+    if (this.y <= 35) {
+        // console.log('hit the water');
+        resetPlayer = true;
+    }
+
+    // if player goes off left side of screen
+    if (this.x < 0) {
+        // console.log('went off the left side!')
+        resetPlayer = true;
+    }
+
+    // if player goes off right side of screen
+    if (this.x >= 500) {
+        // console.log('went off the right side!')
+        resetPlayer = true;
+    }
+
+    if (resetPlayer) {
+        this.x = 200;
+        this.y = 380;
+    }
 };
 
 Player.prototype.render = function () {
