@@ -1,5 +1,5 @@
 // Enemies our player must avoid
-var Enemy = function() {
+var Enemy = function(horizontLocation, speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
@@ -7,8 +7,8 @@ var Enemy = function() {
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
     this.x = Enemy.offScreenLocation;
-    this.y = 60;
-    this.speed = 200;
+    this.y = horizontLocation;
+    this.speed = speed;
 };
 
 Enemy.offScreenLocation = -100;
@@ -52,7 +52,11 @@ Player.prototype.render = function () {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-var allEnemies = [new Enemy(), new Enemy()];
+var allEnemies = [
+    new Enemy(60, 200),
+    new Enemy(145, 350),
+    new Enemy(230, 150),
+];
 var player = new Player();
 
 
