@@ -5,7 +5,7 @@ var Enemy = function(horizontLocation, speed) {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
+    this.sprite = 'images/Car_2.png';
     this.x = -100;
     this.y = horizontLocation;
     this.speed = speed;
@@ -57,7 +57,7 @@ Enemy.prototype.detectCollision = function () {
 // This class requires an update(), render() and
 // a handleInput() method.
 function Player() {
-    this.sprite = 'images/char-boy.png';
+    this.sprite = 'images/IndianGoth.png';
     this.x = 200;
     this.y = 380;
 }
