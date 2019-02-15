@@ -108,13 +108,13 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                //'images/grass-block.png'    // Row 2 of 2 of grass
-                'images/rock.png'
+                'images/Path.png',   // Top row is water
+                'images/Road.png',   // Row 1 of 3 of stone
+                'images/Road.png',   // Row 2 of 3 of stone
+                'images/Road.png',   // Row 3 of 3 of stone
+                'images/Path.png',   // Row 1 of 2 of grass
+                'images/grass-block.png'    // Row 2 of 2 of grass
+
             ],
             numRows = 6,
             numCols = 5,
@@ -175,7 +175,9 @@ var Engine = (function(global) {
         'images/char-boy.png',
         'images/Car_2.png',
         'images/IndianGoth.png',
-        'images/rock.png'
+        'images/rock.png',
+        'images/Path.png',
+        'images/Road.png'
     ]);
     Resources.onReady(init);
 
