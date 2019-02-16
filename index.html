@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div id="mask">
+    <div id="dialog">
+      <h1> Game Over </h1>
+      <p id="final-score"> You scored some points </p>
+      <button onclick="resetGame()"> Play again </button>
+      <button onclick="quitGame()"> Quit </button>
+      <div id="cb-container">
+        <input type="checkbox" id="mute">
+        <label for="mute">Mute sound effects</label>
+      </div>
+    </div>
+  </div>
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
