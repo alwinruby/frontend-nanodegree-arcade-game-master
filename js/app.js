@@ -12,7 +12,7 @@ var Enemy = function(horizontLocation, speed) {
 };
 
 // list of speeds for the enemy
-Enemy.speeds = [100, 150, 200, 250, 300, 350, 400, 450];
+Enemy.speeds = [ 150, 200, 250, 300, 350, 400, 450, 500];
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
