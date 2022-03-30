@@ -175,7 +175,7 @@ var Engine = (function(global) {
         'images/char-boy.png',
         'images/Car_2.png',
         'images/IndianGoth.png',
-        'images/rock.png',
+        'images/Rock.png',
         'images/Path.png',
         'images/Road.png'
     ]);
