@@ -125,6 +125,7 @@ var allEnemies = [
     new Enemy(60, 200),
     new Enemy(145, 350),
     new Enemy(230, 150),
+    new Enemy(315, 150),
 ];
 var player = new Player();
 

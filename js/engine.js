@@ -112,11 +112,12 @@ var Engine = (function(global) {
                 'images/Road.png',   // Row 1 of 3 of stone
                 'images/Road.png',   // Row 2 of 3 of stone
                 'images/Road.png',   // Row 3 of 3 of stone
+                'images/Road.png',   // Row 3 of 3 of stone Duplicate
                 'images/Path.png',   // Row 1 of 2 of grass
                 'images/grass-block.png'    // Row 2 of 2 of grass
 
             ],
-            numRows = 6,
+            numRows = 7,
             numCols = 5,
             row, col;
 
